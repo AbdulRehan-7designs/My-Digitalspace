@@ -1,11 +1,67 @@
+/* Entry Effect Styles */
+#entry-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000; /* Black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeInOut 3s ease-in-out forwards;
+}
+
+#entry-effect h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff; /* White text */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    opacity: 0; /* Start with invisible text */
+    animation: textFadeIn 2s ease-in-out 0.5s forwards;
+}
+
+/* Fade In and Out Animation */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden; /* Hide after animation */
+    }
+}
+
+/* Text Fade In Animation */
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #fff; /* White text for better contrast */
-    background-color: #000; /* Black background */
+    color: #fff;
+    background-color: #000;
 }
 
 header {
@@ -58,14 +114,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #0077b5; /* LinkedIn Blue */
+    color: #0077b5;
 }
 
 section {
     padding: 2rem;
     margin: 1rem auto;
     max-width: 800px;
-    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -161,7 +217,7 @@ h2 {
 }
 
 .social-links a:hover {
-    color: #0077b5; /* LinkedIn Blue */
+    color: #0077b5;
 }
 
 footer {
